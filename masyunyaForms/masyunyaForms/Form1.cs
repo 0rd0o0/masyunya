@@ -30,7 +30,6 @@ namespace masyunyaForms
             }
             catch (System.FormatException)
             {
-                MessageBox.Show("Вводить можно только цифры и запятую!");
                 textBox1.Clear();
             }
         }
@@ -47,76 +46,189 @@ namespace masyunyaForms
             }
             catch (System.FormatException)
             {
-                MessageBox.Show("Вводить можно только цифры и запятую!");
                 textBox2.Clear();
             }
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            double arg1 = Convert.ToDouble(textBox1.Text);
-            double arg2 = Convert.ToDouble(textBox2.Text);
-            double res = arg1 + arg2;
-            button9.Text = Convert.ToString(res);
+            try
+            {
+                double arg1 = Convert.ToDouble(textBox1.Text);
+                double arg2 = Convert.ToDouble(textBox2.Text);
+                double res = arg1 + arg2;
+                button9.Text = Convert.ToString(res);
+            }
+            catch (System.FormatException)
+            {
+                textBox1.Clear();
+                textBox2.Clear();
+            }
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            double arg1 = Convert.ToDouble(textBox1.Text);
-            double arg2 = Convert.ToDouble(textBox2.Text);
-            double res = arg1 - arg2;
-            button9.Text = Convert.ToString(res);
+            try
+            {
+                double arg1 = Convert.ToDouble(textBox1.Text);
+                double arg2 = Convert.ToDouble(textBox2.Text);
+                double res = arg1 - arg2;
+                button9.Text = Convert.ToString(res);
+            }
+            catch (System.FormatException)
+            {
+                textBox1.Clear();
+                textBox2.Clear();
+            }
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            double arg1 = Convert.ToDouble(textBox1.Text);
-            double arg2 = Convert.ToDouble(textBox2.Text);
-            double res = arg1 * arg2;
-            button9.Text = Convert.ToString(res);
+            try
+            {
+                double arg1 = Convert.ToDouble(textBox1.Text);
+                double arg2 = Convert.ToDouble(textBox2.Text);
+                double res = arg1 * arg2;
+                button9.Text = Convert.ToString(res);
+            }
+            catch (System.FormatException)
+            {
+                textBox1.Clear();
+                textBox2.Clear();
+            }
         }
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            double arg1 = Convert.ToDouble(textBox1.Text);
-            double arg2 = Convert.ToDouble(textBox2.Text);
-            double res = arg1 / arg2;
-            button9.Text = Convert.ToString(res);
+            try
+            {
+                double arg1 = Convert.ToDouble(textBox1.Text);
+                double arg2 = Convert.ToDouble(textBox2.Text);
+                if (arg2==0)
+                {
+                    MessageBox.Show("На ноль делить нельзя.");
+                    return;
+                }
+                double res = arg1 / arg2;
+                button9.Text = Convert.ToString(res);
+            }
+            catch (System.FormatException)
+            {
+                textBox1.Clear();
+                textBox2.Clear();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            double arg1 = Convert.ToDouble(textBox1.Text);
-            double arg2 = Convert.ToDouble(textBox2.Text);
-            double res = Math.Pow(arg1,arg2);
-            button9.Text = Convert.ToString(res);
+            try
+            {
+                double arg1 = Convert.ToDouble(textBox1.Text);
+                double arg2 = Convert.ToDouble(textBox2.Text);
+                double res = Math.Pow(arg1, arg2);
+                button9.Text = Convert.ToString(res);
+            }
+            catch (System.FormatException)
+            {
+                textBox1.Clear();
+                textBox2.Clear();
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            double arg1 = Convert.ToDouble(textBox1.Text);
-            double arg2 = Convert.ToDouble(textBox2.Text);
-            double res = (arg1+arg2)/2;
-            button9.Text = Convert.ToString(res);
+            try
+            {
+                double arg1 = Convert.ToDouble(textBox1.Text);
+                double arg2 = Convert.ToDouble(textBox2.Text);
+                double res = (arg1 + arg2) / 2;
+                button9.Text = Convert.ToString(res);
+            }
+            catch (System.FormatException)
+            {
+                textBox1.Clear();
+                textBox2.Clear();
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            double arg1 = Convert.ToDouble(textBox1.Text);
-            double arg2 = Convert.ToDouble(textBox2.Text);
-            double x = (arg1 * arg2);
-            double res = Math.Sqrt(x);
-            button9.Text = Convert.ToString(res);
+            try
+            {
+                double arg1 = Convert.ToDouble(textBox1.Text);
+                double arg2 = Convert.ToDouble(textBox2.Text);
+                double x = (arg1 * arg2);
+                double res = Math.Sqrt(x);
+                button9.Text = Convert.ToString(res);
+            }
+            catch (System.FormatException)
+            {
+                textBox1.Clear();
+                textBox2.Clear();
+            }
         }
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-            double arg1 = Convert.ToDouble(textBox1.Text);
-            double arg2 = Convert.ToDouble(textBox2.Text);
-            double res = (arg1 % arg2);
-            button9.Text = Convert.ToString(res);
+            try
+            {
+                double arg1 = Convert.ToDouble(textBox1.Text);
+                double arg2 = Convert.ToDouble(textBox2.Text);
+                if (arg2 == 0)
+                {
+                    MessageBox.Show("На ноль делить нельзя.");
+                    return;
+                }
+                double res = (arg1 % arg2);
+                button9.Text = Convert.ToString(res);
+            }
+            catch (System.FormatException)
+            {
+                textBox1.Clear();
+                textBox2.Clear();
+            }
+        }
+        public static bool textBox1Clicked = false;
+        public static bool textBox2Clicked = false;
+        private void TextBox1_Click(object sender, EventArgs e)
+        {
+            if (textBox1Clicked==false)
+            {
+                textBox1.Clear();
+                textBox1Clicked = true;
+            }
         }
 
+        private void TextBox2_Click(object sender, EventArgs e)
+        {
+            if (textBox2Clicked == false)
+            {
+                textBox2.Clear();
+                textBox2Clicked = true;
+            }
+        }
 
+        private void Button11_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = button9.Text;
+        }
+
+        private void Button10_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = button9.Text;
+        }
+
+        private void Button12_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("\"+\" - сложение." + Environment.NewLine +
+                "\"-\" - вычитание." + Environment.NewLine +
+                "\"*\" - умножение." + Environment.NewLine +
+                "\"/\" - деление." + Environment.NewLine +
+                "\"%\" - остаток от деления." + Environment.NewLine +
+                "\"^\" - возведение числа x в степень y." + Environment.NewLine +
+                "\"Average\" - среднее арифметическое чисел." + Environment.NewLine +
+                "\"Geom. Av.\" - среднее геометрическое чисел." + Environment.NewLine +
+                "\"Copy to 1,2\" - копировать ответ в строчку с соответствующим номером", "СПРАВКА");
+        }
     }
 }
