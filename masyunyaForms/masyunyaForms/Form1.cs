@@ -18,13 +18,6 @@ namespace masyunyaForms
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            double arg1 = Convert.ToDouble(textBox1.Text);
-            double arg2 = Convert.ToDouble(textBox2.Text);
-            double res = arg1 + arg2;
-            label1.Text = Convert.ToString(res);
-        }
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(textBox1.Text))
@@ -59,12 +52,20 @@ namespace masyunyaForms
             }
         }
 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            double arg1 = Convert.ToDouble(textBox1.Text);
+            double arg2 = Convert.ToDouble(textBox2.Text);
+            double res = arg1 + arg2;
+            button9.Text = Convert.ToString(res);
+        }
+
         private void Button2_Click(object sender, EventArgs e)
         {
             double arg1 = Convert.ToDouble(textBox1.Text);
             double arg2 = Convert.ToDouble(textBox2.Text);
             double res = arg1 - arg2;
-            label1.Text = Convert.ToString(res);
+            button9.Text = Convert.ToString(res);
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -72,7 +73,7 @@ namespace masyunyaForms
             double arg1 = Convert.ToDouble(textBox1.Text);
             double arg2 = Convert.ToDouble(textBox2.Text);
             double res = arg1 * arg2;
-            label1.Text = Convert.ToString(res);
+            button9.Text = Convert.ToString(res);
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -80,7 +81,42 @@ namespace masyunyaForms
             double arg1 = Convert.ToDouble(textBox1.Text);
             double arg2 = Convert.ToDouble(textBox2.Text);
             double res = arg1 / arg2;
-            label1.Text = Convert.ToString(res);
+            button9.Text = Convert.ToString(res);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            double arg1 = Convert.ToDouble(textBox1.Text);
+            double arg2 = Convert.ToDouble(textBox2.Text);
+            double res = Math.Pow(arg1,arg2);
+            button9.Text = Convert.ToString(res);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            double arg1 = Convert.ToDouble(textBox1.Text);
+            double arg2 = Convert.ToDouble(textBox2.Text);
+            double res = (arg1+arg2)/2;
+            button9.Text = Convert.ToString(res);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            double arg1 = Convert.ToDouble(textBox1.Text);
+            double arg2 = Convert.ToDouble(textBox2.Text);
+            double x = (arg1 * arg2);
+            double res = Math.Sqrt(x);
+            button9.Text = Convert.ToString(res);
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            double arg1 = Convert.ToDouble(textBox1.Text);
+            double arg2 = Convert.ToDouble(textBox2.Text);
+            double res = (arg1 % arg2);
+            button9.Text = Convert.ToString(res);
+        }
+
+
     }
 }
