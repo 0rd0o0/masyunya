@@ -169,9 +169,17 @@ namespace masyunyaForms
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-            double arg1 = Convert.ToDouble(textBox1.Text);
-            double res = calc1.Ex(arg1);
-            label2.Text = Convert.ToString(res);
+            try
+            {
+                double arg1 = Convert.ToDouble(textBox1.Text);
+                double res = calc1.Ex(arg1);
+                label2.Text = Convert.ToString(res);
+            }
+            catch (System.FormatException)
+            {
+                textBox1.Clear();
+                textBox2.Clear();
+            }
         }
         public static bool textBox1Clicked = false;
         public static bool textBox2Clicked = false;
