@@ -56,8 +56,8 @@ namespace masyunyaForms
             {
                 double arg1 = Convert.ToDouble(textBox1.Text);
                 double arg2 = Convert.ToDouble(textBox2.Text);
-                double res = arg1 + arg2;
-                button9.Text = Convert.ToString(res);
+                double res = calc2.Plus(arg1, arg2);
+                label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)
             {
@@ -72,8 +72,8 @@ namespace masyunyaForms
             {
                 double arg1 = Convert.ToDouble(textBox1.Text);
                 double arg2 = Convert.ToDouble(textBox2.Text);
-                double res = arg1 - arg2;
-                button9.Text = Convert.ToString(res);
+                double res = calc2.Minus(arg1, arg2);
+                label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)
             {
@@ -88,8 +88,8 @@ namespace masyunyaForms
             {
                 double arg1 = Convert.ToDouble(textBox1.Text);
                 double arg2 = Convert.ToDouble(textBox2.Text);
-                double res = arg1 * arg2;
-                button9.Text = Convert.ToString(res);
+                double res = calc2.Multiplex(arg1, arg2);
+                label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)
             {
@@ -109,8 +109,8 @@ namespace masyunyaForms
                     MessageBox.Show("На ноль делить нельзя.");
                     return;
                 }
-                double res = arg1 / arg2;
-                button9.Text = Convert.ToString(res);
+                double res = calc2.Devision(arg1, arg2);
+                label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)
             {
@@ -125,8 +125,8 @@ namespace masyunyaForms
             {
                 double arg1 = Convert.ToDouble(textBox1.Text);
                 double arg2 = Convert.ToDouble(textBox2.Text);
-                double res = Math.Pow(arg1, arg2);
-                button9.Text = Convert.ToString(res);
+                double res = calc2.Power(arg1, arg2);
+                label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)
             {
@@ -141,8 +141,8 @@ namespace masyunyaForms
             {
                 double arg1 = Convert.ToDouble(textBox1.Text);
                 double arg2 = Convert.ToDouble(textBox2.Text);
-                double res = (arg1 + arg2) / 2;
-                button9.Text = Convert.ToString(res);
+                double res = calc2.Arif(arg1, arg2);
+                label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)
             {
@@ -157,9 +157,8 @@ namespace masyunyaForms
             {
                 double arg1 = Convert.ToDouble(textBox1.Text);
                 double arg2 = Convert.ToDouble(textBox2.Text);
-                double x = (arg1 * arg2);
-                double res = Math.Sqrt(x);
-                button9.Text = Convert.ToString(res);
+                double res = calc2.Geom(arg1, arg2);
+                label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)
             {
@@ -170,23 +169,9 @@ namespace masyunyaForms
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                double arg1 = Convert.ToDouble(textBox1.Text);
-                double arg2 = Convert.ToDouble(textBox2.Text);
-                if (arg2 == 0)
-                {
-                    MessageBox.Show("На ноль делить нельзя.");
-                    return;
-                }
-                double res = (arg1 % arg2);
-                button9.Text = Convert.ToString(res);
-            }
-            catch (System.FormatException)
-            {
-                textBox1.Clear();
-                textBox2.Clear();
-            }
+            double arg1 = Convert.ToDouble(textBox1.Text);
+            double res = calc1.Ex(arg1);
+            label2.Text = Convert.ToString(res);
         }
         public static bool textBox1Clicked = false;
         public static bool textBox2Clicked = false;
@@ -210,12 +195,12 @@ namespace masyunyaForms
 
         private void Button11_Click(object sender, EventArgs e)
         {
-            textBox2.Text = button9.Text;
+            textBox2.Text = label2.Text;
         }
 
         private void Button10_Click(object sender, EventArgs e)
         {
-            textBox1.Text = button9.Text;
+            textBox1.Text = label2.Text;
         }
 
         private void Button12_Click(object sender, EventArgs e)
@@ -224,7 +209,7 @@ namespace masyunyaForms
                 "\"-\" - вычитание." + Environment.NewLine +
                 "\"*\" - умножение." + Environment.NewLine +
                 "\"/\" - деление." + Environment.NewLine +
-                "\"%\" - остаток от деления." + Environment.NewLine +
+                "\"e^x\" - возведение числа e в степень x." + Environment.NewLine +
                 "\"^\" - возведение числа x в степень y." + Environment.NewLine +
                 "\"Average\" - среднее арифметическое чисел." + Environment.NewLine +
                 "\"Geom. Av.\" - среднее геометрическое чисел." + Environment.NewLine +
