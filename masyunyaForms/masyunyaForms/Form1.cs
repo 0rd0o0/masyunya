@@ -172,7 +172,7 @@ namespace masyunyaForms
             try
             {
                 double arg1 = Convert.ToDouble(textBox1.Text);
-                double res = calc1.Ex(arg1);
+                double res = calc2.Ex(arg1);
                 label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)

@@ -36,5 +36,9 @@ namespace masyunyaForms
         {
             return a * b;
         }
+        public static double Ex(double a)
+        {
+            return Math.Pow(Math.E, a);
+        }
     }
 }
