@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace masyunyaForms
 {
-    class calc2
+    public class calc2
     {
         public static double Plus(double a, double b)
         {
