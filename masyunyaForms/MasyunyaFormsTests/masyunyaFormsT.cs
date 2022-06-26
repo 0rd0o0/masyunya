@@ -20,9 +20,9 @@ namespace MasyunyaFormsTests
         [Test]
         public void MinusT()
         {
-            double x = 20.0;
-            double y = 6.0;
-            double expected = 14;
+            double x = 20.2;
+            double y = 6.1;
+            double expected = 14.1;
 
             double actual = calc2.Minus(x, y);
 
