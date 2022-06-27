@@ -50,6 +50,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="calc2.cs" />
+    <Compile Include="arif.cs" />
+    <Compile Include="OneArgumentFactory.cs" />
+    <Compile Include="ex.cs" />
+    <Compile Include="IOneArgumentCalculator.cs" />
+    <Compile Include="multiplex.cs" />
+    <Compile Include="power.cs" />
+    <Compile Include="devision.cs" />
+    <Compile Include="geom.cs" />
+    <Compile Include="minus.cs" />
+    <Compile Include="TwoArgumentsFactory.cs" />
+    <Compile Include="ITwoArgumentsCalculator.cs" />
+    <Compile Include="plus.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

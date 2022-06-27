@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "masyunyaForms", "masyunyaForms\masyunyaForms.csproj", "{C8AF8234-ECC4-42AE-BB33-3F782B1EC582}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasyunyaFormsTests", "MasyunyaFormsTests\MasyunyaFormsTests.csproj", "{73678B40-EC02-4B7B-B553-B7EEBA5FF0DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasyunyaFormsTests", "MasyunyaFormsTests\MasyunyaFormsTests.csproj", "{73678B40-EC02-4B7B-B553-B7EEBA5FF0DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMasyunya", "WebMasyunya\WebMasyunya.csproj", "{B31011BE-7338-43E5-859A-402FE2513527}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{73678B40-EC02-4B7B-B553-B7EEBA5FF0DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73678B40-EC02-4B7B-B553-B7EEBA5FF0DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73678B40-EC02-4B7B-B553-B7EEBA5FF0DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B31011BE-7338-43E5-859A-402FE2513527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B31011BE-7338-43E5-859A-402FE2513527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B31011BE-7338-43E5-859A-402FE2513527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B31011BE-7338-43E5-859A-402FE2513527}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

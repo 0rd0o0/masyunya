@@ -56,7 +56,9 @@ namespace masyunyaForms
             {
                 double arg1 = Convert.ToDouble(textBox1.Text);
                 double arg2 = Convert.ToDouble(textBox2.Text);
-                double res = calc2.Plus(arg1, arg2);
+                ITwoArgumentsCalculator calculator =
+                    TwoArgumentsFactory.CreateCalculator("plus");
+                double res = calculator.Calculate(arg1, arg2);
                 label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)
@@ -72,7 +74,9 @@ namespace masyunyaForms
             {
                 double arg1 = Convert.ToDouble(textBox1.Text);
                 double arg2 = Convert.ToDouble(textBox2.Text);
-                double res = calc2.Minus(arg1, arg2);
+                ITwoArgumentsCalculator calculator =
+                    TwoArgumentsFactory.CreateCalculator("minus");
+                double res = calculator.Calculate(arg1, arg2);
                 label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)
@@ -88,7 +92,9 @@ namespace masyunyaForms
             {
                 double arg1 = Convert.ToDouble(textBox1.Text);
                 double arg2 = Convert.ToDouble(textBox2.Text);
-                double res = calc2.Multiplex(arg1, arg2);
+                ITwoArgumentsCalculator calculator =
+                    TwoArgumentsFactory.CreateCalculator("multiplex");
+                double res = calculator.Calculate(arg1, arg2);
                 label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)
@@ -109,7 +115,9 @@ namespace masyunyaForms
                     MessageBox.Show("На ноль делить нельзя.");
                     return;
                 }
-                double res = calc2.Devision(arg1, arg2);
+                ITwoArgumentsCalculator calculator =
+                    TwoArgumentsFactory.CreateCalculator("devision");
+                double res = calculator.Calculate(arg1, arg2);
                 label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)
@@ -125,7 +133,9 @@ namespace masyunyaForms
             {
                 double arg1 = Convert.ToDouble(textBox1.Text);
                 double arg2 = Convert.ToDouble(textBox2.Text);
-                double res = calc2.Power(arg1, arg2);
+                ITwoArgumentsCalculator calculator =
+                    TwoArgumentsFactory.CreateCalculator("power");
+                double res = calculator.Calculate(arg1, arg2);
                 label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)
@@ -141,7 +151,9 @@ namespace masyunyaForms
             {
                 double arg1 = Convert.ToDouble(textBox1.Text);
                 double arg2 = Convert.ToDouble(textBox2.Text);
-                double res = calc2.Arif(arg1, arg2);
+                ITwoArgumentsCalculator calculator =
+                    TwoArgumentsFactory.CreateCalculator("arif");
+                double res = calculator.Calculate(arg1, arg2);
                 label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)
@@ -157,7 +169,9 @@ namespace masyunyaForms
             {
                 double arg1 = Convert.ToDouble(textBox1.Text);
                 double arg2 = Convert.ToDouble(textBox2.Text);
-                double res = calc2.Geom(arg1, arg2);
+                ITwoArgumentsCalculator calculator =
+                    TwoArgumentsFactory.CreateCalculator("geom");
+                double res = calculator.Calculate(arg1, arg2);
                 label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)
@@ -172,7 +186,9 @@ namespace masyunyaForms
             try
             {
                 double arg1 = Convert.ToDouble(textBox1.Text);
-                double res = calc2.Ex(arg1);
+                IOneArgumentCalculator calculator =
+                    OneArgumentFactory.CreateCalculator("ex");
+                double res = calculator.Calculate(arg1);
                 label2.Text = Convert.ToString(res);
             }
             catch (System.FormatException)
