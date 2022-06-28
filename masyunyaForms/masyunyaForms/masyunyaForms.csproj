@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="calc2.cs" />
     <Compile Include="calc\arif.cs" />
     <Compile Include="fabrics\OneArgumentFactory.cs" />
     <Compile Include="calc\ex.cs" />

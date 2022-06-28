@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace masyunyaForms
 {
-    class geom : ITwoArgumentsCalculator
+    public class geom : ITwoArgumentsCalculator
     {
         public double Calculate(double a, double b)
         {

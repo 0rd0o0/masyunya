@@ -12,10 +12,19 @@ namespace MasyunyaFormsTests
             double x = 10.3;
             double y = 7.7;
             double expected = 18;
-
-            double actual = calc2.Plus(x, y);
+            plus c = new plus();
+            double actual = c.Calculate(x, y);
             
             Assert.AreEqual(expected,actual);
+        }
+        //advanced test
+        [TestCase(0,2,2)]
+        public void PlusT2(double x, double y, double expected)
+        {
+            plus c = new plus();
+            double actual = c.Calculate(x, y);
+
+            Assert.AreEqual(expected, actual);
         }
         [Test]
         public void MinusT()
@@ -23,8 +32,8 @@ namespace MasyunyaFormsTests
             double x = 20.2;
             double y = 6.1;
             double expected = 14.1;
-
-            double actual = calc2.Minus(x, y);
+            minus c = new minus();
+            double actual = c.Calculate(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -34,8 +43,8 @@ namespace MasyunyaFormsTests
             double x = 20;
             double y = 6;
             double expected = 13;
-
-            double actual = calc2.Arif(x, y);
+            arif c = new arif();
+            double actual = c.Calculate(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -45,8 +54,8 @@ namespace MasyunyaFormsTests
             double x = 30.4;
             double y = 5.1;
             double expected = 12.451505933018705;
-
-            double actual = calc2.Geom(x, y);
+            geom c = new geom();
+            double actual = c.Calculate(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -56,8 +65,8 @@ namespace MasyunyaFormsTests
             double x = 30;
             double y = 4;
             double expected = 7.5;
-
-            double actual = calc2.Devision(x, y);
+            devision c = new devision();
+            double actual = c.Calculate(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -67,8 +76,8 @@ namespace MasyunyaFormsTests
             double x = 20;
             double y = 6;
             double expected = 64000000;
-
-            double actual = calc2.Power(x, y);
+            power c = new power();
+            double actual = c.Calculate(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -78,8 +87,8 @@ namespace MasyunyaFormsTests
             double x = 30.5;
             double y = 2.5;
             double expected = 76.25;
-
-            double actual = calc2.Multiplex(x, y);
+            multiplex c = new multiplex();
+            double actual = c.Calculate(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -88,10 +97,14 @@ namespace MasyunyaFormsTests
         {
             double x = 3;
             double expected = 20.085536923187664;
-
-            double actual = calc2.Ex(x);
+            ex c = new ex();
+            double actual = c.Calculate(x);
 
             Assert.AreEqual(expected, actual);
         }
     }
+    /*Testing fabrics
+    [TestCase("", typeof())]
+    */
+
 }

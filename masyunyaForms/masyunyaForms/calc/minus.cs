@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace masyunyaForms
 {
-    class minus : ITwoArgumentsCalculator
+    public class minus : ITwoArgumentsCalculator
     {
         public double Calculate(double a, double b)
         {
